@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="InfluenceDiagrams.PropertyControls.PropertyValue"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfluenceDiagrams.PropertyControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Background="White">
+        <Border BorderBrush="LightGray" BorderThickness="1"></Border>
+        <Expander
+            IsExpanded="True"
+            Header="Outcomes"
+            MinWidth="100"
+            >
+            <Expander.Content>
+                <StackPanel x:Name="Container" Orientation="Vertical">
+
+                </StackPanel>
+            </Expander.Content>
+        </Expander>
+        
+
+    </Grid>
+</UserControl>

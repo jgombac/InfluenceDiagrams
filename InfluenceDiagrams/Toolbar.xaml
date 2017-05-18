@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="InfluenceDiagrams.Toolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfluenceDiagrams"
+             xmlns:z="clr-namespace:InfluenceDiagrams"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800">
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Horizontal">
+
+        <Grid Margin="5,0,5,0" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <ComboBox ScrollViewer.PanningMode="None" Width="60" HorizontalAlignment="Center">
+                <ComboBoxItem>
+                    <Slider x:Name="NodeSizeSlider" Value="40" Minimum="20" Maximum="80"  Height="100" Orientation="Vertical" ValueChanged="NodeSizeSliderValueChanged"></Slider>
+                </ComboBoxItem>
+            </ComboBox>
+            <Label Background="White" Width="Auto" Height="Auto"  Content="{Binding Source={x:Static z:MDesigner.Instance}, Path=NodeSize}" IsHitTestVisible="False" Margin="5,14,15,10"></Label>
+            <Label FontSize="8" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"  Margin="0,-3,0,0" Height="20">Node size</Label>
+        </Grid>
+        
+
+        <Button x:Name="Evaluate" Click="EvaluateDiagramClick" Width="Auto" Height="Auto" Margin="40,0,0,0" Background="{x:Null}" >Begin evaluate
+        </Button>
+
+        <Button Click="SaveDiagramClick">Save</Button>
+        <Button Click="LoadDiagramClick">Load</Button>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="InfluenceDiagrams.PropertyControls.NodeDefinition"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfluenceDiagrams.PropertyControls"
+             xmlns:btn="clr-namespace:InfluenceDiagrams.Buttons"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <Grid VerticalAlignment="Center" Background="White">
+        <Border x:Name="DefBorder" BorderThickness="1" BorderBrush="LightGray"></Border>
+
+        <Expander
+            Header="Definition"
+            IsExpanded="True"
+            MinWidth="100"
+            >
+            <Expander.Content>
+        
+        <Grid VerticalAlignment="Center" Background="Transparent" MinWidth="120">
+                    <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <UniformGrid Grid.Row="0" Columns="2">
+
+
+                <btn:PlusButton Width="20" Height="20" Click="AddClick"></btn:PlusButton>
+
+                <btn:CheckButton Width="20" Height="20" Click="SaveClick"></btn:CheckButton>
+            </UniformGrid>
+            <ListView MinHeight="5" Background="Transparent" x:Name="DefinitionContainer" Grid.Row="1" Margin="0,5,0,0">
+            </ListView>
+
+
+        </Grid>
+            </Expander.Content>
+        </Expander>
+    </Grid>
+</UserControl>

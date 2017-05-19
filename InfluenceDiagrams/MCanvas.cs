@@ -92,6 +92,11 @@ namespace InfluenceDiagrams
             anchorLine.Add(new KeyValuePair<Node, Anchor>(node, anchor));
             if(anchorLine.Count >= 2)
             {
+                if(anchorLine[0].Key == anchorLine[1].Key)
+                {
+                    ClearAnchorLine();
+                    return;
+                }
                 KeyValuePair<Node, Anchor> first = anchorLine[0];
                 KeyValuePair<Node, Anchor> second = anchorLine[1];
                 Relation rel = new Relation(first.Key, first.Value, second.Key, second.Value, true);

@@ -14,7 +14,7 @@ These are decisions or possible outcomes. When done adding definitions to a node
 3. BUILDING NODE RELATIONS<br />
 When you're done with names and definitions, you're set to begin with influences.<br />
 To create a relation/influence(arrow between 2 nodes), hover over an achor (top, bottom, left, right) and drag-drop it to another anchor.
-Make sure to DragDrop and not click (not handled yet, might cause errors).
+
 
 4. SETTING PROBABILITIES<br />
 When you're done with relations, you can start setting event outcome probabilities.<br />
